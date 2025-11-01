@@ -1,6 +1,0 @@
-html,body{background:#0b0c10;color:#e6e8f0;font:15px -apple-system,system-ui,Segoe UI,Roboto,Inter,sans-serif}
-#root,*{color:inherit}
-.panel,.bubble{background:#121821;border:1px solid #2b3440;border-radius:10px;padding:10px}
-input,textarea{background:#0f131a;color:#e6e8f0;border:1px solid #2b3440;border-radius:8px;padding:8px}
-button{background:#1b2230;color:#e6e8f0;border:1px solid #2b3440;border-radius:8px;padding:8px 10px}
-a{color:#8ab4ff}

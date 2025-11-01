@@ -1,8 +1,8 @@
 # Node
 node_modules/
 npm-debug.log*
-pnpm-lock.yaml
 yarn.lock
+pnpm-lock.yaml
 
 # Rust / Tauri
 **/target/
@@ -24,7 +24,7 @@ logs/
 .env.local
 *.key
 
-# Backups / misc
+# Backups / archives / merge outputs
 *.bak*
 _archive/
 snapshots/

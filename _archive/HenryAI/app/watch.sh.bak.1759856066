@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-./kill-port.sh || true
-echo "Watcher starting (frontend + backend)…"
-npx chokidar "client/src/**/*" "client/index.html" "src/**/*.ts" -d 300 -c "./rebuild.sh && echo OK $(date) || echo FAIL $(date)"
