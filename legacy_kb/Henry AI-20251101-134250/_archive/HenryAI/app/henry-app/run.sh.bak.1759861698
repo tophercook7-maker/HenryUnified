@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+app_dir="$(cd "$(dirname "$0")" && pwd)"
+pidfile="$app_dir/server.pid"
+logfile="$app_dir/server.log"
+
+color(){ tput setaf "$1" 2>/dev/null || true; }
+norm(){ tput sgr0 2>/dev/null || true; }
+
+start(){
+  color 6; echo "[run] Clean up…"; norm
+  lsof -ti :3000 | xargs -r kill -9 || true
+  pkill -f "ts-node src/server.ts" 2>/dev/null || true
+  pkill -f "watch.sh" 2>/dev/null || true
+  rm -f "$pidfile" .rebuild.lock
+
+  color 6; echo "[run] Build client…"; norm
+  cd "$app_dir/client" && pnpm build && cd "$app_dir"
+  rsync -a --delete client/dist/ public/
+
+[run] Start server…
+attempt=0
+while [ $attempt -lt 3 ]; do
+  nohup npx ts-node --transpile-only src/server.ts > "$logfile" 2>&1 & echo $! > "$pidfile"
+  sleep 0.8
+  if kill -0 "$(cat "$pidfile" 2>/dev/null)" 2>/dev/null; then
+    echo "[run] ✅ Henry at http://127.0.0.1:3000"
+    break
+  else
+    if grep -q "EADDRINUSE" "$logfile"; then
+      echo "[run] ⚠ Port 3000 busy, freeing…"
+      lsof -ti :3000 | xargs -r kill -9
+      rm -f "$pidfile"
+    fi
+    attempt=$((attempt+1))
+    sleep 1
+  fi
+done
+if [ $attempt -ge 3 ]; then
+  echo "[run] ❌ server failed to start after retries."
+  tail -n 40 "$logfile"
+  exit 1
+fi
+
+[run] Start watcher (frontend)…
+nohup "$app_dir/watch.sh" > "$app_dir/watch.log" 2>&1 & echo $! > "$app_dir/watch.pid"

@@ -1,0 +1,18 @@
+/Users/christophercook/Projects/LostBible
+/Users/christophercook/Projects/LostBible/01_raw/ENHANCED_LOST_BIBLE
+/Users/christophercook/Projects/LostBible/01_raw/COMPLETE_LOST_BIBLE
+/Users/christophercook/Projects/Bundles/Topher_File_Org_Starter/Workspace/Projects/Lost_Bible
+/Users/christophercook/Desktop/Organized/Current/Lost_Bible_Texts
+/Users/christophercook/Desktop/Organized/Current/Lost Bible Chapters
+/Users/christophercook/Library/Application Support/lostbibleai
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c676.app/Contents/Frameworks/LostBibleAI Helper (Plugin).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c676.app/Contents/Frameworks/LostBibleAI Helper (GPU).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c676.app/Contents/Frameworks/LostBibleAI Helper (Renderer).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c676.app/Contents/Frameworks/LostBibleAI Helper.app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c677.app/Contents/Frameworks/LostBibleAI Helper (Plugin).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c677.app/Contents/Frameworks/LostBibleAI Helper (GPU).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c677.app/Contents/Frameworks/LostBibleAI Helper (Renderer).app
+/Users/christophercook/Library/Application Support/CloudDocs/session/i/f7c677.app/Contents/Frameworks/LostBibleAI Helper.app
+/Users/christophercook/Desktop/HENRY_COMPANION/lostbible_paths.txt
+/Applications/LostBibleAI.app
+/Users/christophercook/Documents/_Productive/Misc/LostBibleAI

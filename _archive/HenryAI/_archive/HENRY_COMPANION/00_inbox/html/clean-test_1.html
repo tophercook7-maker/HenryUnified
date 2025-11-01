@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Henry AI - Clean Test</title>
+<style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+            color: #e6e6e6; 
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .wizard-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        button { 
+            padding: 12px 24px; 
+            background: linear-gradient(135deg, #2563eb, #1d4ed8); 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin: 5px;
+        }
+        button:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); 
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background: #64748b;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .wizard-step {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .wizard-step.active {
+            display: block;
+        }
+        .wizard-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .wizard-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 120px;
+            justify-content: center;
+        }
+        .wizard-btn.primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+        .wizard-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .wizard-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .result {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .success { color: #059669; }
+        .error { color: #dc2626; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+<div class="wizard-container">
+<h1>🧙‍♂️ Henry AI - Clean Test</h1>
+<p>Testing basic button functionality</p>
+<div class="wizard-step active" id="step-1">
+<div class="step-illustration">
+<i class="fas fa-handshake"></i>
+</div>
+<h2>Step 1: Test Button</h2>
+<p>Click the button below to test basic functionality</p>
+<div class="wizard-actions">
+<button class="wizard-btn primary" onclick="testButton()">Let's Get Started</button>
+</div>
+</div>
+<div class="wizard-step" id="step-2">
+<div class="step-illustration">
+<i class="fas fa-check-circle"></i>
+</div>
+<h2>Step 2: Result</h2>
+<p class="result" id="test-result">Waiting for test...</p>
+<div class="wizard-actions">
+<button class="wizard-btn secondary" onclick="goBack()">Back</button>
+</div>
+</div>
+<div class="result" id="debug-info">
+<strong>Debug Info:</strong><br/>
+<span id="status">Initializing...</span>
+</div>
+</div>
+</div>
+<script>
+        console.log('=== CLEAN TEST PAGE LOADED ===');
+        console.log('DOM ready state:', document.readyState);
+        console.log('Body exists:', !!document.body);
+        
+        // Simple HenryAI mock for testing
+        class CleanHenryAI {
+            constructor() {
+                console.log('CleanHenryAI created successfully');
+                this.initialized = true;
+                this.businessFocus = 'test';
+            }
+            
+            showNotification(message, type = 'info') {
+                console.log(`[Notification] ${type}: ${message}`);
+                const status = document.getElementById('status');
+                if (status) {
+                    status.innerHTML += `<br>📢 ${message}`;
+                }
+            }
+            
+            speak(message) {
+                console.log(`[Speak] ${message}`);
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(message);
+                    speechSynthesis.speak(utterance);
+                }
+            }
+            
+            updateStatus(status, message) {
+                console.log(`[Status] ${status}: ${message}`);
+                const statusEl = document.getElementById('status');
+                if (statusEl) {
+                    statusEl.innerHTML += `<br>Status: ${status} - ${message}`;
+                }
+            }
+        }
+        
+        // Create HenryAI instance
+        try {
+            window.henryAI = new CleanHenryAI();
+            console.log('✅ window.henryAI created successfully:', window.henryAI);
+        } catch (error) {
+            console.error('❌ Failed to create HenryAI:', error);
+        }
+        
+        function testButton() {
+            console.log('=== TEST BUTTON CLICKED ===');
+            console.log('Event:', event);
+            console.log('this:', this);
+            console.log('window.henryAI:', window.henryAI);
+            
+            try {
+                const result = document.getElementById('test-result');
+                const debugInfo = document.getElementById('debug-info');
+                const status = document.getElementById('status');
+                
+                // Clear previous status
+                if (status) status.innerHTML = '<strong>Test Results:</strong><br>';
+                
+                result.textContent = '✅ Button clicked successfully!';
+                result.className = 'result success';
+                result.style.color = '#059669';
+                
+                if (debugInfo) {
+                    debugInfo.innerHTML = `
+                        <strong>✅ Test Results:</strong><br>
+                        ✅ Button click detected<br>
+                        ✅ DOM manipulation working<br>
+                        ✅ JavaScript execution successful<br>
+                        ✅ HenryAI instance: ${typeof window.henryAI}<br>
+                        ✅ Function execution: testButton() completed
+                    `;
+                }
+                
+                if (window.henryAI) {
+                    window.henryAI.showNotification('Button test completed successfully!', 'success');
+                    window.henryAI.speak('Button test completed successfully!');
+                    window.henryAI.updateStatus('success', 'Button functionality verified');
+                }
+                
+                // Move to next step
+                nextWizardStep(2);
+                
+                console.log('✅ Test completed successfully');
+                
+            } catch (error) {
+                console.error('❌ Test failed:', error);
+                const result = document.getElementById('test-result');
+                result.textContent = '❌ Test failed: ' + error.message;
+                result.className = 'result error';
+                result.style.color = '#dc2626';
+                
+                if (debugInfo) {
+                    debugInfo.innerHTML = `
+                        <strong>❌ Test Failed:</strong><br>
+                        Error: ${error.message}<br>
+                        Stack: ${error.stack}
+                    `;
+                }
+            }
+        }
+        
+        function nextWizardStep(step) {
+            console.log('nextWizardStep called with step:', step);
+            console.log('window.henryAI:', window.henryAI);
+            
+            try {
+                const currentStep = document.querySelector('.wizard-step.active');
+                const nextStep = document.getElementById(`step-${step}`);
+                
+                console.log('Current step element:', currentStep);
+                console.log('Next step element:', nextStep);
+                console.log('Step number:', step);
+                
+                if (currentStep && nextStep) {
+                    console.log('Both step elements found, proceeding...');
+                    currentStep.classList.remove('active');
+                    nextStep.classList.add('active');
+                    console.log('✅ Successfully moved to step:', step);
+                } else {
+                    console.error('❌ Could not find step elements:', { 
+                        currentStep: !!currentStep, 
+                        nextStep: !!nextStep 
+                    });
+                    throw new Error('Step elements not found');
+                }
+            } catch (error) {
+                console.error('❌ nextWizardStep error:', error);
+                throw error;
+            }
+        }
+        
+        function goBack() {
+            console.log('Going back to step 1');
+            nextWizardStep(1);
+        }
+        
+        // Comprehensive initialization test
+        setTimeout(() => {
+            console.log('=== COMPREHENSIVE INITIALIZATION TEST ===');
+            console.log('Document ready:', document.readyState);
+            console.log('Query selector available:', typeof document.querySelector);
+            console.log('Step 1 exists:', !!document.getElementById('step-1'));
+            console.log('Step 2 exists:', !!document.getElementById('step-2'));
+            console.log('Test button exists:', !!document.querySelector('button'));
+            console.log('Result element exists:', !!document.getElementById('test-result'));
+            
+            const status = document.getElementById('status');
+            if (status) {
+                status.innerHTML = `
+                    <strong>✅ System Ready</strong><br>
+                    ✅ DOM fully loaded<br>
+                    ✅ All elements found<br>
+                    ✅ HenryAI initialized<br>
+                    ✅ Ready for testing
+                `;
+            }
+        }, 100);
+    </script>
+<script src="henry-core.js"></script></body>
+</html>

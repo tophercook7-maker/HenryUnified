@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry AI - Test Implementation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .test-section h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+        
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #1d4ed8;
+        }
+        
+        .result {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            white-space: pre-wrap;
+        }
+        
+        .error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <h1>Henry AI - Functionality Test</h1>
+    
+    <div class="test-section">
+        <h2>Platform Detection</h2>
+        <button id="test-platform">Get Platform</button>
+        <div id="platform-result" class="result" style="display: none;"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>File System Operations</h2>
+        <button id="test-desktop-path">Get Desktop Path</button>
+        <button id="test-documents-path">Get Documents Path</button>
+        <div id="filesystem-result" class="result" style="display: none;"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Security Features</h2>
+        <button id="test-password">Generate Secure Password</button>
+        <button id="test-audit">Perform Security Audit</button>
+        <button id="test-breaches">Check for Breaches</button>
+        <div id="security-result" class="result" style="display: none;"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Terminal Operations</h2>
+        <button id="test-terminal">Execute Terminal Command</button>
+        <div id="terminal-result" class="result" style="display: none;"></div>
+    </div>
+
+    <script type="module">
+        import { invoke } from '@tauri-apps/api/tauri';
+        import { readDir, createDir } from '@tauri-apps/api/fs';
+        import { Command } from '@tauri-apps/api/shell';
+        
+        // Platform Detection Test
+        document.getElementById('test-platform').addEventListener('click', async () => {
+            const resultElement = document.getElementById('platform-result');
+            try {
+                const platform = await invoke('get_platform');
+                resultElement.textContent = `Platform: ${platform}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        // File System Operations Test
+        document.getElementById('test-desktop-path').addEventListener('click', async () => {
+            const resultElement = document.getElementById('filesystem-result');
+            try {
+                const desktopPath = await invoke('get_desktop_path');
+                resultElement.textContent = `Desktop Path: ${desktopPath}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        document.getElementById('test-documents-path').addEventListener('click', async () => {
+            const resultElement = document.getElementById('filesystem-result');
+            try {
+                const documentsPath = await invoke('get_documents_path');
+                resultElement.textContent = `Documents Path: ${documentsPath}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        // Security Features Test
+        document.getElementById('test-password').addEventListener('click', async () => {
+            const resultElement = document.getElementById('security-result');
+            try {
+                const password = await invoke('generate_secure_password');
+                resultElement.textContent = `Generated Password: ${password}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        document.getElementById('test-audit').addEventListener('click', async () => {
+            const resultElement = document.getElementById('security-result');
+            try {
+                const audit = await invoke('perform_security_audit');
+                resultElement.textContent = `Security Audit Results:
+Vulnerabilities: ${audit.vulnerabilities}
+Security Score: ${audit.score}/100
+Recommendations: ${audit.recommendations.join(', ')}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        document.getElementById('test-breaches').addEventListener('click', async () => {
+            const resultElement = document.getElementById('security-result');
+            try {
+                const breaches = await invoke('check_breaches');
+                if (breaches.length > 0) {
+                    resultElement.textContent = `Breaches Found:
+${breaches.map(b => `• ${b.service} (${b.severity}) on ${b.date}`).join('\n')}`;
+                } else {
+                    resultElement.textContent = 'No security breaches detected. Your system is secure.';
+                }
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+        
+        // Terminal Operations Test
+        document.getElementById('test-terminal').addEventListener('click', async () => {
+            const resultElement = document.getElementById('terminal-result');
+            try {
+                // Execute a simple terminal command
+                const command = new Command('sh', ['-c', 'echo "Hello from terminal!"']);
+                const result = await command.execute();
+                
+                resultElement.textContent = `Terminal Command Output:
+Exit Code: ${result.code}
+STDOUT: ${result.stdout}
+STDERR: ${result.stderr}`;
+                resultElement.className = 'result';
+                resultElement.style.display = 'block';
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.className = 'result error';
+                resultElement.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

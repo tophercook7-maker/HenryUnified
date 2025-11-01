@@ -1,0 +1,44 @@
+"use strict";
+(function(){
+  const box = document.getElementById("box");
+  const send = document.getElementById("send");
+  const msgs = document.getElementById("msgs");
+  const dot = document.getElementById("status-dot");
+  const stx = document.getElementById("status-text");
+  const model = document.getElementById("model");
+  const chunks = document.getElementById("chunks");
+  function addMsg(text, me){
+    const div = document.createElement("div");
+    div.textContent = text;
+    msgs.appendChild(div); msgs.scrollTop = msgs.scrollHeight;
+    return div;
+  }
+  async function health(){
+    try{
+      const r = await fetch("/health"); if(!r.ok) throw new Error(r.status);
+      const j = await r.json();
+      stx.textContent = "online"; dot.className = "dot dot-ok";
+      model.textContent = j.provider || (j.hasOpenAIKey ? "openai" : "local");
+      chunks.textContent = j.chunks || 0;
+    }catch(e){ stx.textContent = "offline"; dot.className = "dot dot-bad"; }
+  }
+  async function ask(q){
+    const you = addMsg(q,true);
+    try{
+      const r = await fetch("/ask",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({query:q})});
+      const j = await r.json();
+      if(!j.ok) throw new Error(j.error||"error");
+      const m = addMsg(j.answer||"(no answer)");
+      if(Array.isArray(j.sources)&&j.sources.length){
+        const s = document.createElement("div"); s.className="srcs";
+        s.textContent = "Sources: " + j.sources.map(x=>x.doc||"unknown").filter(Boolean).join(", ");
+        m.appendChild(s);
+      }
+    }catch(e){ addMsg("Error: "+e.message); }
+  }
+  send.addEventListener("click",()=>{ const q=box.value.trim(); if(!q) return; box.value=""; ask(q); });
+  box.addEventListener("keydown",(ev)=>{
+    if(ev.key==="Enter" && !ev.shiftKey){ ev.preventDefault(); const q=box.value.trim(); if(!q) return; box.value=""; ask(q); }
+  });
+  health();
+})();

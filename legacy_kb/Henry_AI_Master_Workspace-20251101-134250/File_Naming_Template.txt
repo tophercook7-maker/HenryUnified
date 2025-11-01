@@ -1,0 +1,6 @@
+Use this template when creating new docs:
+Title: Henry AI – <Document Purpose> – <Month Year> v<version>
+Owner: <Owner Name>
+Status: Draft | Review | Final
+Summary: <1-2 sentences>
+Links: <Related docs / issues>

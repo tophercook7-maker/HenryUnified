@@ -1,0 +1,9 @@
+[dev] starting Vite → http://localhost:5173
+
+  VITE v5.4.20  ready in 119 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+3:23:37 PM [vite] .env.local changed, restarting server...
+3:23:37 PM [vite] server restarted.
+./dev.sh: line 23: 61565 Killed: 9               npx vite --port 5173 --strictPort

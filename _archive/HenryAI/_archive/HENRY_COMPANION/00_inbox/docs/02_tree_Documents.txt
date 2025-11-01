@@ -1,0 +1,32 @@
+[ 160]  /Users/christophercook/Documents/
+└── [ 960]  Organized/
+    ├── [ 832]  AppIcons/
+    ├── [  64]  Backups/
+    ├── [1.2M]  bg.png
+    ├── [ 160]  DAD/
+    ├── [ 288]  Documents - Christopher’s MacBook Pro/
+    ├── [799K]  IHF Application - Updated Income Guidelines 2025 copy.pdf
+    ├── [ 258]  MASTER_MANIFEST_v4.json
+    ├── [ 90K]  MASTER.docx
+    ├── [  88]  package-lock.json
+    ├── [  64]  Personal/
+    ├── [1.1M]  peter.pdf
+    ├── [  64]  Projects/
+    ├── [ 288]  SSClean/
+    ├── [ 352]  StrainSpotter/
+    ├── [ 15K]  StrainSpotter_Master_Package_PERMANENT_v4.zip
+    ├── [644M]  StrainSpotter_restore_20250906-164848.zip
+    ├── [644M]  StrainSpotter_restore_20250906-165011.zip
+    ├── [264M]  StrainSpotter-backup-20250905-153558.tgz
+    ├── [5.6M]  strainspotter-ui.png
+    ├── [  96]  StrainSpotterClean/
+    ├── [306K]  The apocrypha and pseudepigrapha of the old Testament in English : Charles, R. H. (Robert Henry), 18.html
+    ├── [230K]  The Apocrypha and Pseudepigrapha of the Old Testament in English. Edited by R. H. Charles. Vol. 1 : .html
+    ├── [146K]  The Apocrypha and Pseudepigrapha of the Old Testament:Volume I - Wikisource, the free online library.html
+    ├── [128K]  The Book of Jubilees.pdf - Google Drive.html
+    ├── [  96]  The Lost Bible/
+    ├── [ 77K]  The Lost Bible.docx
+    ├── [484M]  VW bug service manual pdf.zip
+    └── [  64]  Work/
+
+13 directories, 17 files

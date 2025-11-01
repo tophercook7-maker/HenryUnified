@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Henry AI - Minimal Working Version</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        .section {
+            background: #34495e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        button:active {
+            background: #21618c;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .output {
+            background: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            min-height: 50px;
+            font-family: monospace;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin: 5px 0;
+        }
+
+        .status-working {
+            background: #27ae60;
+        }
+
+        .status-error {
+            background: #e74c3c;
+        }
+
+        .status-info {
+            background: #f39c12;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+<h1>🧙‍♂️ Henry AI - Minimal Working</h1>
+<div class="section">
+<h2>Button Functionality Test</h2>
+<button id="test-btn-1">Test Button 1</button>
+<button id="test-btn-2">Test Button 2</button>
+<button id="test-btn-3">Test Button 3</button>
+<div class="output" id="button-output">Click buttons to test...</div>
+</div>
+<div class="section">
+<h2>Send Functionality Test</h2>
+<input id="message-input" placeholder="Type message and press Enter..." type="text"/>
+<button id="send-btn">Send Message</button>
+<div class="output" id="send-output">Messages will appear here...</div>
+</div>
+<div class="section">
+<h2>Voice Recognition Test</h2>
+<button id="start-voice-btn">🎤 Start Voice</button>
+<button id="stop-voice-btn">⏹️ Stop Voice</button>
+<button id="test-voice-cmd">🗣️ Test "Hey Henry"</button>
+<div class="output" id="voice-output">Voice status: Not started</div>
+</div>
+<div class="section">
+<h2>System Status</h2>
+<div class="output" id="system-status">Initializing...</div>
+</div>
+</div>
+<script>
+        class MinimalHenryAI {
+            constructor() {
+                this.recognition = null;
+                this.isListening = false;
+                this.messageHistory = [];
+                
+                this.init();
+            }
+
+            init() {
+                this.log('system-status', 'Initializing Henry AI Minimal Version...');
+                
+                // Test basic functionality
+                this.testBasicFunctionality();
+                
+                // Setup event listeners
+                this.setupEventListeners();
+                
+                // Initialize voice
+                this.initVoiceRecognition();
+                
+                this.log('system-status', '✅ Henry AI Minimal Version Ready!', 'working');
+            }
+
+            testBasicFunctionality() {
+                this.log('system-status', 'Testing basic functionality...');
+                
+                // Test 1: DOM manipulation
+                try {
+                    const testElement = document.createElement('div');
+                    testElement.textContent = 'Test';
+                    document.body.appendChild(testElement);
+                    document.body.removeChild(testElement);
+                    this.log('system-status', '✅ DOM manipulation working', 'working');
+                } catch (error) {
+                    this.log('system-status', `❌ DOM manipulation failed: ${error.message}`, 'error');
+                }
+
+                // Test 2: Event handling
+                try {
+                    const testBtn = document.createElement('button');
+                    let eventFired = false;
+                    testBtn.addEventListener('click', () => { eventFired = true; });
+                    testBtn.click();
+                    if (eventFired) {
+                        this.log('system-status', '✅ Event handling working', 'working');
+                    } else {
+                        this.log('system-status', '❌ Event handling failed', 'error');
+                    }
+                } catch (error) {
+                    this.log('system-status', `❌ Event handling failed: ${error.message}`, 'error');
+                }
+
+                // Test 3: Local storage
+                try {
+                    localStorage.setItem('henry-test', 'working');
+                    const testValue = localStorage.getItem('henry-test');
+                    localStorage.removeItem('henry-test');
+                    if (testValue === 'working') {
+                        this.log('system-status', '✅ Local storage working', 'working');
+                    } else {
+                        this.log('system-status', '❌ Local storage test failed', 'error');
+                    }
+                } catch (error) {
+                    this.log('system-status', `❌ Local storage failed: ${error.message}`, 'error');
+                }
+            }
+
+            setupEventListeners() {
+                this.log('system-status', 'Setting up event listeners...');
+
+                // Button tests
+                document.getElementById('test-btn-1').addEventListener('click', () => {
+                    this.handleButtonClick(1);
+                });
+
+                document.getElementById('test-btn-2').addEventListener('click', () => {
+                    this.handleButtonClick(2);
+                });
+
+                document.getElementById('test-btn-3').addEventListener('click', () => {
+                    this.handleButtonClick(3);
+                });
+
+                // Send functionality
+                document.getElementById('send-btn').addEventListener('click', () => {
+                    this.handleSendMessage();
+                });
+
+                document.getElementById('message-input').addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        this.handleSendMessage();
+                    }
+                });
+
+                // Voice controls
+                document.getElementById('start-voice-btn').addEventListener('click', () => {
+                    this.startVoiceRecognition();
+                });
+
+                document.getElementById('stop-voice-btn').addEventListener('click', () => {
+                    this.stopVoiceRecognition();
+                });
+
+                document.getElementById('test-voice-cmd').addEventListener('click', () => {
+                    this.testVoiceCommand();
+                });
+
+                this.log('system-status', '✅ All event listeners attached', 'working');
+            }
+
+            handleButtonClick(buttonNumber) {
+                const timestamp = new Date().toLocaleTimeString();
+                const message = `[${timestamp}] Button ${buttonNumber} clicked successfully!`;
+                
+                this.log('button-output', message, 'working');
+                
+                // Add to message history
+                this.messageHistory.push({
+                    type: 'button',
+                    button: buttonNumber,
+                    timestamp: timestamp
+                });
+            }
+
+            handleSendMessage() {
+                const input = document.getElementById('message-input');
+                const message = input.value.trim();
+                
+                if (message) {
+                    const timestamp = new Date().toLocaleTimeString();
+                    
+                    // Display user message
+                    this.log('send-output', `[${timestamp}] You: ${message}`, 'info');
+                    
+                    // Clear input
+                    input.value = '';
+                    
+                    // Add to history
+                    this.messageHistory.push({
+                        type: 'message',
+                        content: message,
+                        timestamp: timestamp
+                    });
+                    
+                    // Simulate Henry response
+                    setTimeout(() => {
+                        const responses = [
+                            "I understand your request!",
+                            "I'll help you with that right away.",
+                            "Great idea! Let me get started.",
+                            "I can definitely help with that.",
+                            "Interesting! Let me analyze this."
+                        ];
+                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                        this.log('send-output', `[${new Date().toLocaleTimeString()}] Henry: ${randomResponse}`, 'working');
+                    }, 1000);
+                    
+                } else {
+                    this.log('send-output', 'Please enter a message!', 'error');
+                }
+            }
+
+            initVoiceRecognition() {
+                this.log('voice-output', 'Initializing voice recognition...', 'info');
+
+                try {
+                    if ('webkitSpeechRecognition' in window) {
+                        this.recognition = new webkitSpeechRecognition();
+                    } else if ('SpeechRecognition' in window) {
+                        this.recognition = new SpeechRecognition();
+                    } else {
+                        this.log('voice-output', '❌ Speech recognition not supported', 'error');
+                        return;
+                    }
+
+                    this.recognition.continuous = true;
+                    this.recognition.interimResults = true;
+                    this.recognition.lang = 'en-US';
+
+                    this.recognition.onstart = () => {
+                        this.isListening = true;
+                        this.log('voice-output', '🎤 Voice recognition started - listening...', 'working');
+                    };
+
+                    this.recognition.onresult = (event) => {
+                        let finalTranscript = '';
+                        for (let i = event.resultIndex; i < event.results.length; i++) {
+                            if (event.results[i].isFinal) {
+                                finalTranscript += event.results[i][0].transcript;
+                            }
+                        }
+                        
+                        if (finalTranscript) {
+                            this.log('voice-output', `🗣️ Heard: "${finalTranscript}"`, 'info');
+                            
+                            if (finalTranscript.toLowerCase().includes('hey henry')) {
+                                this.log('voice-output', '🎉 Wake word detected! Hello!', 'working');
+                                this.respondToVoiceCommand(finalTranscript);
+                            }
+                        }
+                    };
+
+                    this.recognition.onerror = (event) => {
+                        this.log('voice-output', `❌ Voice error: ${event.error}`, 'error');
+                    };
+
+                    this.recognition.onend = () => {
+                        this.isListening = false;
+                        this.log('voice-output', '🔇 Voice recognition stopped', 'info');
+                    };
+
+                    this.log('voice-output', '✅ Voice recognition initialized', 'working');
+
+                } catch (error) {
+                    this.log('voice-output', `❌ Voice initialization failed: ${error.message}`, 'error');
+                }
+            }
+
+            startVoiceRecognition() {
+                if (this.recognition && !this.isListening) {
+                    try {
+                        this.recognition.start();
+                        this.log('voice-output', 'Starting voice recognition...', 'info');
+                    } catch (error) {
+                        this.log('voice-output', `❌ Failed to start: ${error.message}`, 'error');
+                    }
+                } else {
+                    this.log('voice-output', 'Voice recognition already active or not available', 'info');
+                }
+            }
+
+            stopVoiceRecognition() {
+                if (this.recognition && this.isListening) {
+                    this.recognition.stop();
+                    this.log('voice-output', 'Stopping voice recognition...', 'info');
+                }
+            }
+
+            testVoiceCommand() {
+                this.log('voice-output', 'Testing voice command simulation...', 'info');
+                this.respondToVoiceCommand("Hey Henry, are you working?");
+            }
+
+            respondToVoiceCommand(transcript) {
+                const timestamp = new Date().toLocaleTimeString();
+                this.log('send-output', `[${timestamp}] Voice: ${transcript}`, 'info');
+                
+                setTimeout(() => {
+                    const responses = [
+                        "Yes, I'm working perfectly!",
+                        "Hello! I'm here and ready to help.",
+                        "I can hear you loud and clear!",
+                        "Voice commands are working great!",
+                        "I'm listening and ready to assist you."
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    this.log('send-output', `[${new Date().toLocaleTimeString()}] Henry: ${randomResponse}`, 'working');
+                }, 500);
+            }
+
+            log(elementId, message, type = 'info') {
+                const element = document.getElementById(elementId);
+                const timestamp = new Date().toLocaleTimeString();
+                const statusClass = type === 'working' ? 'status-working' : 
+                                  type === 'error' ? 'status-error' : 'status-info';
+                
+                element.innerHTML += `<div class="status ${statusClass}">[${timestamp}] ${message}</div>`;
+                element.scrollTop = element.scrollHeight;
+                
+                console.log(`[${timestamp}] ${message}`);
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded - Starting Minimal Henry AI...');
+            window.minimalHenry = new MinimalHenryAI();
+        });
+
+        // Global error handler
+        window.addEventListener('error', (event) => {
+            console.error('Global error:', event.error);
+            if (window.minimalHenry) {
+                window.minimalHenry.log('system-status', `ERROR: ${event.error.message}`, 'error');
+            }
+        });
+    </script>
+<script src="henry-core.js"></script></body>
+</html>

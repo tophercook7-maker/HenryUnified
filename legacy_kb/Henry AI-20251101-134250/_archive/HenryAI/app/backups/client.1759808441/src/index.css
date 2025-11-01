@@ -1,0 +1,111 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+html,body,#root{height:100%;margin:0}
+.app{display:flex;height:100%;font-family:-apple-system,system-ui,sans-serif;background:#121212;color:#eaeaea}
+.sidebar{width:220px;background:#0f1117;color:#fff;padding:16px}
+.chat{flex:1;display:flex;flex-direction:column}
+.messages{flex:1;overflow:auto;padding:16px;background:#181a20}
+.bubble{background:#1e222a;border:1px solid #273043;border-radius:10px;padding:10px 12px;margin:8px 0}
+.bubble.me{background:#2b3250}
+.toolbar{padding:8px 16px;background:#12161f;border-top:1px solid #273043}
+.inputRow{display:flex;gap:10px;align-items:flex-end;padding:10px 16px;background:#12161f;border-top:1px solid #273043}
+textarea{flex:1;min-height:80px;max-height:240px;resize:vertical;font-size:16px;padding:10px;border-radius:10px;background:#0f1117;color:#eaeaea;border:1px solid #273043}
+button{padding:10px 14px;border-radius:10px;background:#3b82f6;color:white;border:0;cursor:pointer}
+:root{--bg:#121417;--panel:#171b20;--bubble:#1d222a;--bubble-me:#2a3350;--text:#e9edf2;--muted:#b8c0cc;--border:#2b3440;--primary:#3b82f6}
+html,body,#root{height:100%;margin:0}
+.app{display:flex;height:100%;font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+.sidebar{width:230px;background:#0f1117;padding:16px;color:#fff;border-right:1px solid var(--border)}
+.chat{flex:1;display:flex;flex-direction:column}
+.messages{flex:1;overflow:auto;padding:16px;background:var(--panel)}
+.bubble{background:var(--bubble);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin:10px 0;line-height:1.45;color:var(--text)}
+.bubble.me{background:var(--bubble-me)}
+.toolbar{padding:8px 16px;background:#10141a;border-top:1px solid var(--border);color:var(--muted);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.inputRow{display:flex;gap:10px;align-items:flex-end;padding:12px 16px;background:#10141a;border-top:1px solid var(--border)}
+textarea{flex:1;min-height:110px;max-height:260px;resize:vertical;font-size:16px;padding:12px;border-radius:12px;background:#0f1117;color:var(--text);border:1px solid var(--border)}
+button{padding:12px 16px;border-radius:12px;background:var(--primary);color:#fff;border:0;cursor:pointer}
+.examples{padding:8px 16px;background:#0f1117;border-top:1px solid var(--border)}
+.pill{display:block;background:#111827;border:1px solid var(--border);color:var(--muted);padding:10px 12px;border-radius:10px;margin:6px 0;cursor:pointer}
+
+/* === No unlabeled scrollbars: show only on hover with a tiny "Scroll" badge === */
+.messages,.sidebar,.srcList{ overflow:auto; position:relative; }
+/* Firefox */
+.messages,.sidebar,.srcList{ scrollbar-width: none; }
+.messages:hover,.sidebar:hover,.srcList:hover{ scrollbar-width: thin; }
+/* WebKit */
+.messages::-webkit-scrollbar,.sidebar::-webkit-scrollbar,.srcList::-webkit-scrollbar{ width:0; height:0; }
+.messages:hover::-webkit-scrollbar,.sidebar:hover::-webkit-scrollbar,.srcList:hover::-webkit-scrollbar{ width:8px; height:8px; }
+.messages:hover::-webkit-scrollbar-thumb,.sidebar:hover::-webkit-scrollbar-thumb,.srcList:hover::-webkit-scrollbar-thumb{ background:#3b82f6; border-radius:8px; }
+.messages:hover::-webkit-scrollbar-track,.sidebar:hover::-webkit-scrollbar-track,.srcList:hover::-webkit-scrollbar-track{ background:#0f1117; }
+/* Hover label so users know it scrolls */
+.messages:hover::after,.sidebar:hover::after,.srcList:hover::after{
+  content:"Scroll"; position:absolute; right:8px; bottom:8px; font-size:11px; padding:2px 6px;
+  background:#111827; color:#b8c0cc; border:1px solid #273043; border-radius:6px; opacity:0.9;
+}
+/* Optional section label style if you add headers in panels */
+.sectionLabel{ font-size:12px; color:#b8c0cc; text-transform:uppercase; letter-spacing:.06em; margin:6px 0 4px; }

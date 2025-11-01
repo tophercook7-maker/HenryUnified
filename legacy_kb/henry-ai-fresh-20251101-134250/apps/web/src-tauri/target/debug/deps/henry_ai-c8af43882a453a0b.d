@@ -1,0 +1,13 @@
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/deps/henry_ai-c8af43882a453a0b.d: src/main.rs /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b3bb944bb98abc687b1cddd76ca309d1879f8b2f97b1c654fa24bfc21fe87cd5 /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b595cb276412445d28317bf666b03af398d470ff768cd255e9cfdacda363d5c1 /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/3d0ac5d42f7d07613abf928076be78421ab230751a9c85fdcfd7f6f6ff5b6585
+
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/deps/henry_ai-c8af43882a453a0b: src/main.rs /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b3bb944bb98abc687b1cddd76ca309d1879f8b2f97b1c654fa24bfc21fe87cd5 /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b595cb276412445d28317bf666b03af398d470ff768cd255e9cfdacda363d5c1 /Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/3d0ac5d42f7d07613abf928076be78421ab230751a9c85fdcfd7f6f6ff5b6585
+
+src/main.rs:
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b3bb944bb98abc687b1cddd76ca309d1879f8b2f97b1c654fa24bfc21fe87cd5:
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/b595cb276412445d28317bf666b03af398d470ff768cd255e9cfdacda363d5c1:
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out/3d0ac5d42f7d07613abf928076be78421ab230751a9c85fdcfd7f6f6ff5b6585:
+
+# env-dep:CARGO_PKG_AUTHORS=you
+# env-dep:CARGO_PKG_DESCRIPTION=Henry AI - Your Local AI Assistant
+# env-dep:CARGO_PKG_NAME=henry-ai
+# env-dep:OUT_DIR=/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/build/henry-ai-470b06151d1c6994/out

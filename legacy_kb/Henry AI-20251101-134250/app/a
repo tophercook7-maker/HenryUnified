@@ -1,0 +1,9 @@
+/* --- temporary readability theme --- */
+html, body { background:#121212; color:#f2f2f2; font:16px -apple-system, system-ui, Segoe UI, Roboto, Arial, sans-serif; }
+input, textarea, button { background:#1f1f1f; color:#fff; border:1px solid #444; padding:8px; border-radius:6px; }
+input::placeholder, textarea::placeholder { color:#bbb; }
+.bubble, .message, .panel, .card { background:#181818 !important; border:1px solid #333 !important; }
+.pill, .chip, .tag { background:#222 !important; border:1px solid #444 !important; }
+.btn, button[type=submit] { background:#2b6cb0; border:1px solid #1f4e80; }
+.btn:hover { filter:brightness(1.1); }
+client/theme-fix.css

@@ -1,0 +1,7 @@
+ 10G	/Users/christophercook/Desktop
+ 12G	/Users/christophercook/Downloads
+ 10G	/Users/christophercook/Documents
+ 24K	/Users/christophercook/Movies
+295M	/Users/christophercook/Music
+2.7G	/Users/christophercook/Pictures
+684M	/Users/christophercook/Projects

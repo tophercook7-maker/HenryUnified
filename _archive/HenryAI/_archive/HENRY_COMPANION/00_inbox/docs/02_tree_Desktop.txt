@@ -1,0 +1,10 @@
+[ 192]  /Users/christophercook/Desktop/
+├── [ 160]  henry_catalog/
+│   ├── [   0]  00_home_size.txt
+│   ├── [ 255]  01_key_folders_sizes.txt
+│   └── [   0]  02_tree_Desktop.txt
+└── [ 128]  Organized/
+    ├── [  64]  Archive/
+    └── [ 192]  Current/
+
+5 directories, 3 files

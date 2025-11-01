@@ -1,0 +1,21 @@
+Timestamp: 2025-10-08_19-18-24
+Node: v20.19.5
+NPM:  10.8.2
+Electron: v38.2.2
+PM2: 6.0.13
+Working dir: /Users/christophercook/Desktop/Henry AI/app
+
+PM2 STATUS:
+┌────┬──────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name             │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼──────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ [1m[36m6[39m[22m  │ henry-desktop    │ default     │ N/A     │ [7m[1mfork[22m[27m    │ 0        │ 0      │ 0    │ [31m[1mstopped[22m[39m   │ 0%       │ 0b       │ [1mchr… │ [90mdisabled[39m │
+│ [1m[36m1[39m[22m  │ henry-server     │ default     │ N/A     │ [7m[1mfork[22m[27m    │ 9893     │ 22m    │ 0    │ [32m[1monline[22m[39m    │ 0%       │ 53.6mb   │ [1mchr… │ [90mdisabled[39m │
+└────┴──────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+PM2 LAST LOGS (henry-api):
+[1m[90m[TAILING] Tailing last 30 lines for [henry-api] process (change the value with --lines option)[39m[22m
+[32m0|henry-api  | [39m> start
+[32m0|henry-api  | [39m> TS_NODE_PROJECT=tsconfig.server.json node -r ts-node/register/transpile-only src/server.ts
+[32m0|henry-api  | [39mLoaded chunks: 228
+[32m0|henry-api  | [39mHenry AI listening on http://127.0.0.1:3000

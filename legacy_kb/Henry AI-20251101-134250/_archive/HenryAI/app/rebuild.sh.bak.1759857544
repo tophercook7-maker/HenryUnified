@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+APP_ROOT="$(cd "$(dirname "$0")" && pwd)"
+LOCK="$APP_ROOT/.rebuild.lock"
+if mkdir "$LOCK" 2>/dev/null; then trap 'rmdir "$LOCK"' EXIT; else echo "Rebuild already running; skipping."; exit 0; fi
+cd "$APP_ROOT/client"
+pnpm build
+cd "$APP_ROOT"
+rsync -a --delete client/dist/ public/
+./kill-port.sh
+nohup pnpm dev > server.log 2>&1 & echo $! > server.pid
+for i in $(seq 1 40); do
+  sleep 0.5
+  if curl -sf http://127.0.0.1:3000/health >/dev/null; then echo "Server healthy :3000"; exit 0; fi
+done
+echo "Server did not become healthy. Tail follows:"
+tail -n 120 server.log || true
+exit 1

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Functions Test</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .function-status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .available {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .unavailable {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Global Functions Test</h1>
+<div id="function-status"></div>
+<script>
+        const functionsToTest = [
+            'nextWizardStep',
+            'previousWizardStep',
+            'selectBusinessType',
+            'connectService',
+            'verifyOpenAIKey',
+            'skipOpenAISetup',
+            'completeSetup'
+        ];
+        
+        const statusContainer = document.getElementById('function-status');
+        
+        functionsToTest.forEach(funcName => {
+            const div = document.createElement('div');
+            div.className = 'function-status';
+            
+            if (typeof window[funcName] === 'function') {
+                div.classList.add('available');
+                div.textContent = `✓ ${funcName} - Available`;
+            } else {
+                div.classList.add('unavailable');
+                div.textContent = `✗ ${funcName} - Not Available`;
+            }
+            
+            statusContainer.appendChild(div);
+        });
+    </script>
+<script src="henry-core.js"></script></body>
+</html>

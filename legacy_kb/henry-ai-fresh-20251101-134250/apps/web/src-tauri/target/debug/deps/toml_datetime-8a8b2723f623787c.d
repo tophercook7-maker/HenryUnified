@@ -1,0 +1,10 @@
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/deps/toml_datetime-8a8b2723f623787c.d: /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/lib.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/datetime.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/de.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/ser.rs
+
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/deps/libtoml_datetime-8a8b2723f623787c.rlib: /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/lib.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/datetime.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/de.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/ser.rs
+
+/Users/christophercook/Desktop/henry-ai-fresh/apps/web/src-tauri/target/debug/deps/libtoml_datetime-8a8b2723f623787c.rmeta: /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/lib.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/datetime.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/de.rs /Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/ser.rs
+
+/Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/lib.rs:
+/Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/datetime.rs:
+/Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/de.rs:
+/Users/christophercook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/toml_datetime-0.7.2/src/ser.rs:

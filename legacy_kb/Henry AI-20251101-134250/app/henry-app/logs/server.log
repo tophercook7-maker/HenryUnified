@@ -1,0 +1,195 @@
+
+> henry-companion@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry listening on http://127.0.0.1:3000
+ ELIFECYCLE  Command failed.
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/server.ts(193,68): error TS2339: Property 'message' does not exist on type '{}'.
+
+    at createTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12) {
+  diagnosticCodes: [ 2339 ]
+}
+ ELIFECYCLE  Command failed with exit code 1.
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/server.ts(193,68): error TS2339: Property 'message' does not exist on type '{}'.
+
+    at createTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12) {
+  diagnosticCodes: [ 2339 ]
+}
+ ELIFECYCLE  Command failed with exit code 1.
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+Henry AI listening on http://127.0.0.1:3000
+
+> henry-ai@0.1.0 dev /Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app
+> ts-node src/server.ts
+
+/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/server.ts(209,52): error TS2304: Cannot find name 'PUB'.
+
+    at createTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/christophercook/Desktop/HENRY_COMPANION/01_src/henry-app/node_modules/.pnpm/ts-node@10.9.2_@types+node@22.18.8_typescript@5.9.3/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12) {
+  diagnosticCodes: [ 2304 ]
+}
+ ELIFECYCLE  Command failed with exit code 1.

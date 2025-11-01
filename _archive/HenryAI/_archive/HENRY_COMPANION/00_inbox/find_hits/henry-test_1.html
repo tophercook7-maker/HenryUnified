@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Henry AI - Quick Test</title>
+<style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #667eea; 
+            color: white; 
+            text-align: center; 
+            padding: 50px; 
+        }
+        .btn { 
+            background: #ff6b6b; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            margin: 10px;
+            font-size: 1.1rem;
+        }
+        .status { 
+            margin-top: 20px; 
+            padding: 20px; 
+            background: rgba(255,255,255,0.1); 
+            border-radius: 15px; 
+        }
+    </style>
+
+</head>
+<body>
+<h1>🧙‍♂️ Henry AI Test</h1>
+<p>Testing button functionality for Safari</p>
+<button class="btn" onclick="testButton()">Test Button</button>
+<button class="btn" onclick="testVoice()">Test Voice</button>
+<div class="status" id="status">
+        Click buttons to test functionality
+    </div>
+<script>
+        function testButton() {
+            document.getElementById('status').innerHTML = '✅ Button clicked successfully!';
+            console.log('Button test passed');
+        }
+        
+        function testVoice() {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance('Henry AI voice test successful');
+                speechSynthesis.speak(utterance);
+                document.getElementById('status').innerHTML = '✅ Voice synthesis working!';
+            } else {
+                document.getElementById('status').innerHTML = '❌ Voice synthesis not available';
+            }
+        }
+        
+        console.log('Henry AI test page loaded');
+    </script>
+<script src="henry-core.js"></script></body>
+</html>

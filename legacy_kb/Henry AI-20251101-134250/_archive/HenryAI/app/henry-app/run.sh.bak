@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cmd="${1:-start}"
+server_pid_file=.server.pid
+
+kill_strays(){ pkill -f "ts-node.*src/server.ts" 2>/dev/null || true; lsof -ti :3000 | xargs -r kill -9 2>/dev/null || true; }
+
+build_client(){ ( cd client && pnpm install --silent && pnpm build --silent ); }
+
+start(){ kill_strays; build_client; TS_NODE_PROJECT=tsconfig.server.json node -r ts-node/register/transpile-only src/server.ts & echo $! > "$server_pid_file"; echo "Server started (pid $(cat "$server_pid_file"))"; }
+stop(){ kill_strays; [ -f "$server_pid_file" ] && rm -f "$server_pid_file"; echo "Server stopped"; }
+status(){ curl -s http://127.0.0.1:3000/health | jq . || echo "down"; }
+
+case "$cmd" in
+  start) start ;;
+  stop)  stop  ;;
+  status) status ;;
+  *) echo "Usage: ./run.sh {start|stop|status}"; exit 2 ;;
+esac

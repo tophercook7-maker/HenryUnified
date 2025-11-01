@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+app_dir="$(cd "$(dirname "$0")" && pwd)"
+pidfile="$app_dir/server.pid"
+logfile="$app_dir/server.log"
+watchpid="$app_dir/watch.pid"
+
+color(){ tput setaf "$1" 2>/dev/null || true; }
+norm(){ tput sgr0 2>/dev/null || true; }
+
+start(){
+  color 6; echo "[run] Clean up…"; norm
+  lsof -ti :3000 | xargs -r kill -9 || true
+  pkill -f "ts-npx ts-pnpm run server:run" 2>/dev/null || true
+  [ -f "$watchpid" ] && kill -9 "$(cat "$watchpid")" 2>/dev/null || true
+  rm -f "$pidfile" "$watchpid" .rebuild.lock
+
+  color 6; echo "[run] Build client…"; norm
+  cd "$app_dir/client" && pnpm build && cd "$app_dir"
+  rsync -a --delete client/dist/ public/
+
+  color 6; echo "[run] Start server…"; norm
+  attempt=0
+  while [ $attempt -lt 3 ]; do
+    nohup npx ts-pnpm run server:run > "$logfile" 2>&1 & echo $! > "$pidfile"
+    sleep 0.8
+    if kill -0 "$(cat "$pidfile" 2>/dev/null)" 2>/dev/null; then
+      color 2; echo "[run] ✅ Henry at http://127.0.0.1:3000"; norm
+      break
+    else
+      if grep -q "EADDRINUSE" "$logfile" 2>/dev/null; then
+        color 3; echo "[run] ⚠ Port 3000 busy, freeing…"; norm
+        lsof -ti :3000 | xargs -r kill -9 || true
+        rm -f "$pidfile"
+      fi
+      attempt=$((attempt+1))
+      sleep 1
+    fi
+  done
+  if [ $attempt -ge 3 ]; then
+    color 1; echo "[run] ❌ server failed to start after retries."; norm
+    tail -n 80 "$logfile" || true
+    exit 1
+  fi
+
+  color 6; echo "[run] Start watcher (frontend)…"; norm
+  nohup "$app_dir/watch.sh" > "$app_dir/watch.log" 2>&1 & echo $! > "$watchpid"
+}
+
+stop(){
+  color 6; echo "[run] Stop everything…"; norm
+  lsof -ti :3000 | xargs -r kill -9 || true
+  pkill -f "ts-npx ts-pnpm run server:run" 2>/dev/null || true
+  [ -f "$watchpid" ] && kill -9 "$(cat "$watchpid")" 2>/dev/null || true
+  rm -f "$pidfile" "$watchpid" .rebuild.lock
+  color 2; echo "[run] ✅ Stopped."; norm
+}
+
+status(){
+  if kill -0 "$(cat "$pidfile" 2>/dev/null)" 2>/dev/null; then color 2; echo "[run] server: UP"; else color 1; echo "[run] server: DOWN"; fi; norm
+  if [ -f "$watchpid" ] && kill -0 "$(cat "$watchpid" 2>/dev/null)" 2>/dev/null; then color 2; echo "[run] watcher: UP"; else color 1; echo "[run] watcher: DOWN"; fi; norm
+}
+
+logs(){ tail -n 120 -f "$logfile"; }
+
+case "${1:-start}" in
+  start) start ;;
+  stop)  stop  ;;
+  status) status ;;
+  logs) logs ;;
+  *) echo "Usage: ./run.sh {start|stop|status|logs}"; exit 2 ;;
+esac

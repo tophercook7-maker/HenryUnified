@@ -1,0 +1,312 @@
+[4.5K]  /Users/christophercook/Downloads/
+├── [370K]  _workspace_COMPLETE_LOST_BIBLE_HYBRID_SOLUTION.zip
+├── [2.1K]  _workspace_henry-ai-complete-package/
+│   ├── [3.0K]  BRANCH_SETUP.md
+│   ├── [6.2K]  BUSINESS_OF_LIVING_SUMMARY.md
+│   ├── [1.9K]  button-test.html
+│   ├── [4.8K]  CHANGELOG.md
+│   ├── [ 11K]  clean-dark-index.html
+│   ├── [ 11K]  clean-test.html
+│   ├── [3.6K]  COMPLETION_SUMMARY.md
+│   ├── [6.3K]  DEPLOYMENT.md
+│   ├── [6.1K]  diagnostic.html
+│   ├── [ 577]  emergency-restart.html
+│   ├── [8.7K]  ENHANCED_README.md
+│   ├── [ 12K]  enhanced-index.html
+│   ├── [1.3K]  enhanced-todo.md
+│   ├── [ 10K]  FEATURES_GUIDE.md
+│   ├── [3.4K]  FINAL_SUMMARY.md
+│   ├── [2.2K]  FINAL_WORKING_VERSION.md
+│   ├── [ 12K]  final-wizard-test.html
+│   ├── [4.8K]  FIXES_SUMMARY.md
+│   ├── [1.8K]  global-functions-test.html
+│   ├── [ 10K]  HENRY_AI_MASTER_COMPLETE.md
+│   ├── [6.7K]  HENRY_AI_WIZARD_FIXES_COMPLETE.md
+│   ├── [9.3K]  HENRY_DATA_POWERHOUSE_DEMO.md
+│   ├── [4.2K]  HENRY_DEMO_GUIDE.md
+│   ├── [8.2K]  HENRY_MASTER_REBUILD_PLAN.md
+│   ├── [ 16K]  HENRY_PROFESSIONAL_HACKER_REBUILD.md
+│   ├── [ 12K]  HENRY_SYSTEM_CONTROL_ADDITIONS.md
+│   ├── [7.2K]  HENRY_SYSTEM_CONTROL_DEMO.md
+│   ├── [ 707]  henry-ai-complete-analysis.md
+│   ├── [ 80K]  henry-ai-complete-integrated.html
+│   ├── [ 15K]  henry-ai-complete-package-summary.html
+│   ├── [ 62K]  henry-ai-complete-rebuild.html
+│   ├── [ 13K]  henry-ai-complete-summary.html
+│   ├── [ 18K]  henry-ai-final-package-complete.html
+│   ├── [ 39K]  henry-ai-fixed-functionality.html
+│   ├── [5.1K]  henry-ai-package.html
+│   ├── [ 22K]  henry-ai-safari-working.html
+│   ├── [8.4K]  henry-ai-test.html
+│   ├── [3.2K]  henry-ai-verification-report.md
+│   ├── [ 19K]  henry-complete.html
+│   ├── [ 16K]  henry-diagnostic-tool.html
+│   ├── [ 75K]  henry-feature-integration.html
+│   ├── [ 16K]  henry-minimal-working.html
+│   ├── [2.1K]  henry-missing-features-analysis.md
+│   ├── [ 30K]  henry-openai-walkthrough-wizard.html
+│   ├── [6.0K]  henry-standalone.html
+│   ├── [2.0K]  henry-test.html
+│   ├── [1.4K]  henry-wizard-rebuild.md
+│   ├── [ 23K]  henry-working-buttons.html
+│   ├── [9.5K]  henry-working.html
+│   ├── [ 37K]  index_backup.html
+│   ├── [ 52K]  index.html
+│   ├── [1.9K]  LIFE_BUSINESS_PARADIGM.md
+│   ├── [5.3K]  minimal-test.html
+│   ├── [ 24K]  package-lock.json
+│   ├── [ 677]  package.json
+│   ├── [4.8K]  README.md
+│   ├── [6.6K]  SETUP_GUIDE.md
+│   ├── [2.7K]  simple-test.html
+│   ├── [1.3K]  step-by-step-guide.md
+│   ├── [6.9K]  SYSTEM_CONTROL_SUMMARY.md
+│   ├── [2.2K]  test-tauri.html
+│   ├── [1.5K]  todo.md
+│   ├── [ 894]  URGENT_FIXES.md
+│   ├── [1.6K]  WIZARD_FIXES.md
+│   ├── [6.7K]  wizard-functionality-test.html
+│   └── [2.0K]  wizard-test.html
+├── [212K]  _workspace_henry-ai-complete-package.zip
+├── [115M]  _workspace_LOST_BIBLE_COMPLETE_40_PLUS_BOOKS.zip
+├── [8.7M]  _workspace_lost_bible_study_edition_final_complete.zip
+├── [175K]  _workspace_lost_bible_study_edition_phase5_complete.zip
+├── [186K]  _workspace_outputs_lost_bible_study_edition_phase1_complete.zip
+├── [256K]  _workspace_outputs_lost_bible_study_edition_phase2_progress.zip
+├── [ 86M]  _workspace_phase3_sources_complete.zip
+├── [ 30K]  _workspace_strainspotter-working_henry-ai-complete.zip
+├── [6.7K]  _workspace_THE_COMPLETE_LOST_BIBLE_ALL_FORMATS.zip
+├── [ 32K]  _workspace_THE_COMPLETE_LOST_BIBLE_FOR_GOOGLE_DRIVE.zip
+├── [426K]  1bf884f0-be2c-49ed-9ec6-4e5a15987456.mp4
+├── [1.1M]  2024.6.4_All_Purpose_Application_Bag_Amazon-1_(1).jpg
+├── [ 192]  2d-sonic-model_files/
+│   ├── [163K]  767801-2d-sonic-9551ff70-1e1d-479b-a4e0-667a89cdcf41.pdf
+│   ├── [ 19K]  base-for-2d.stl
+│   ├── [217K]  sonic.3mf
+│   └── [712K]  sonic.stl
+├── [579K]  2d-sonic-model_files.zip
+├── [743K]  3deep-flexi-shark-keychain-ams.3mf
+├── [ 13M]  3deep-flexi-shark-keychain-ams(1).3mf
+├── [553M]  650309a7-423d-4155-88eb-c6bb268c4559.zip
+├── [1.4M]  7 Sonic Ring Frikarte3D.stl
+├── [255K]  85b3a882-c7b7-4700-8343-a499235266ea.jpeg
+├── [159K]  a7c95c24-2f81-4f8c-8f2f-bc28ab9428ff.jpeg
+├── [ 416]  All Bundle/
+│   ├── [ 160]  The Family Legacy/
+│   ├── [8.6M]  The Family Legacy.zip*
+│   ├── [ 224]  The Nature's wellness and survival mastery bundle/
+│   ├── [ 62M]  The Nature's wellness and survival mastery bundle.zip*
+│   ├── [ 192]  The Ultimate Faith & Reflection Bundle/
+│   ├── [226M]  The Ultimate Faith & Reflection Bundle.zip*
+│   ├── [ 384]  The Ultimate Productivity & Creativity Toolkit/
+│   ├── [ 39M]  The Ultimate Productivity & Creativity Toolkit.zip*
+│   ├── [ 224]  The ultimate vegan kitchen bundle/
+│   └── [ 81M]  The ultimate vegan kitchen bundle.zip*
+├── [  96]  AppCleaner.app/
+│   └── [ 320]  Contents/
+├── [ 224]  Articulated Pumpkin - Flexi Halloween Cute Friend - 7159927/
+│   ├── [ 128]  files/
+│   ├── [ 128]  images/
+│   ├── [ 140]  LICENSE.txt
+│   └── [ 545]  README.txt
+├── [ 34M]  Articulated Pumpkin - Flexi Halloween Cute Friend - 7159927.zip
+├── [1.9M]  ashtray-model_files.zip
+├── [ 27M]  audacity-macOS-3.7.5-arm64.dmg
+├── [159M]  balenaEtcher-2.1.4-x64.dmg
+├── [175M]  Bambu_Studio_mac-v02.02.02.56-20250915154409.dmg
+├── [101M]  bambu-connect-v2.0.0-beta.7-darwin-arm64.dmg
+├── [ 12M]  bambu-dragon-vengeance-bookmarks.3mf
+├── [4.5M]  Basic Rounded Corner (1).gcode
+├── [4.5M]  Basic Rounded Corner (2).gcode
+├── [4.5M]  Basic Rounded Corner.gcode
+├── [ 41K]  Basic Rounded Corners Square Ashtray with Snuffer v1.2 (1).stl
+├── [ 41K]  Basic Rounded Corners Square Ashtray with Snuffer v1.2.stl
+├── [193K]  BatmanKeychainV1.stl
+├── [200K]  BatmanKeychainV2.stl
+├── [257K]  BatmanKeychainV3.stl
+├── [2.0M]  cannabis-marijuana-ashtray-or-decor-model_files.zip
+├── [7.7M]  cannabis-marijuana-leaf-closeup.jpg
+├── [ 61M]  Catch-All Tray.stl
+├── [ 62K]  Chap.1 final chapter.docx
+├── [ 48M]  ChatGPT.dmg
+├── [380K]  cigarette-joint-holder-and-ashtray-model_files.zip
+├── [ 128]  close-up-weed-leaf-isolated/
+│   ├── [ 29M]  11494161.psd
+│   └── [9.2M]  11494190.png
+├── [ 29M]  close-up-weed-leaf-isolated.zip
+├── [ 13M]  closeup-shot-growing-green-plants-black-background.jpg
+├── [ 576]  COMPLETE_LOST_BIBLE/
+│   ├── [ 12K]  index.html
+│   ├── [ 352]  PHASE_1_GNOSTIC_GOSPELS/
+│   ├── [ 576]  PHASE_1_GOSPELS/
+│   ├── [  96]  PHASE_2_EARLY/
+│   ├── [ 608]  PHASE_2_EARLY_CHRISTIAN/
+│   ├── [ 672]  PHASE_3_BIBLICAL_EXPANSIONS/
+│   ├── [  96]  PHASE_3_EXPANSIONS/
+│   ├── [  96]  PHASE_4_APOCRYPHAL/
+│   ├── [ 416]  PHASE_4_APOCRYPHAL_OT/
+│   ├── [  64]  PHASE_5_ACTS/
+│   ├── [ 320]  PHASE_5_ACTS_EPISTLES/
+│   ├── [ 352]  PHASE_6_APOCALYPSES/
+│   ├── [ 160]  PHASE_7_ADDITIONAL/
+│   ├── [1.1K]  README_COMPLETE.md
+│   └── [4.4K]  README.md
+├── [ 11K]  Cross Keychain Improved.stl
+├── [ 11K]  cross-keychain-improved.stl
+├── [2.2M]  cross-keychain.stl
+├── [ 30M]  Curled_Shark_v2.0_C_KC.stl
+├── [194K]  D-Genesis Retold- The First Great Chapter of the Story - DEVOTIONAL FINAL POLISHED.epub
+├── [641K]  Didache.pdf
+├── [7.5M]  Dino articulé.STL
+├── [ 55M]  dragon-vengeance-bookmarks.stl
+├── [191K]  ecc8b916-637b-4afd-935a-5a691eabc569.jpeg
+├── [ 256]  ENHANCED_LOST_BIBLE/
+│   ├── [7.5K]  enhancement_plan.md
+│   ├── [4.1K]  enhancement_summary.md
+│   ├── [3.5K]  enhancement_todo.md
+│   ├── [ 224]  PHASE_4_APOCRYPHAL_OT/
+│   └── [2.8K]  README.md
+├── [ 69K]  ENHANCED_LOST_BIBLE_PACKAGE.zip
+├── [1.8M]  flute-mod1-part1.stl
+├── [ 16M]  Flying saucer - 10428.zip
+├── [  96]  FSNotes.app/
+│   └── [ 320]  Contents/
+├── [  96]  GitHub Desktop.app/
+│   └── [ 288]  Contents/
+├── [6.3M]  GO Kart kit card_PLA_1h11m.gcode
+├── [6.0M]  GO Kart kit card_PLA_1h8m.gcode
+├── [1.8M]  GO Kart kit card.stl
+├── [ 21M]  halloween-scary-pumpkin-1-model_files (1).zip
+├── [ 21M]  halloween-scary-pumpkin-1-model_files.zip
+├── [ 160]  Henry-AI-macOS-Apple-Silicon/
+│   ├── [  96]  dmg/
+│   └── [  96]  macos/
+├── [1.2K]  henry-fixed-package/
+│   ├── [1.9K]  button-test.html
+│   ├── [6.7K]  clean-dark-index.html
+│   ├── [ 10K]  clean-test.html
+│   ├── [5.8K]  diagnostic.html
+│   ├── [ 509]  emergency-restart.html
+│   ├── [7.8K]  enhanced-index.html
+│   ├── [ 10K]  final-wizard-test.html
+│   ├── [6.9K]  fix_report.json
+│   ├── [1.7K]  global-functions-test.html
+│   ├── [ 77K]  henry-ai-complete-integrated.html
+│   ├── [ 13K]  henry-ai-complete-package-summary.html
+│   ├── [ 58K]  henry-ai-complete-rebuild.html
+│   ├── [ 11K]  henry-ai-complete-summary.html
+│   ├── [ 15K]  henry-ai-final-package-complete.html
+│   ├── [ 23K]  henry-ai-fixed-functionality.html
+│   ├── [4.4K]  henry-ai-package.html
+│   ├── [ 21K]  henry-ai-safari-working.html
+│   ├── [8.2K]  henry-ai-test.html
+│   ├── [ 18K]  henry-complete.html
+│   ├── [8.5K]  henry-core.js
+│   ├── [ 15K]  henry-diagnostic-tool.html
+│   ├── [ 73K]  henry-feature-integration.html
+│   ├── [ 15K]  henry-minimal-working.html
+│   ├── [ 27K]  henry-openai-walkthrough-wizard.html
+│   ├── [5.4K]  henry-standalone.html
+│   ├── [1.9K]  henry-test.html
+│   ├── [ 22K]  henry-working-buttons.html
+│   ├── [8.6K]  henry-working.html
+│   ├── [  24]  index.html
+│   ├── [5.0K]  minimal-test.html
+│   ├── [2.6K]  simple-test.html
+│   ├── [1.2K]  SUMMARY.txt
+│   ├── [2.1K]  test-tauri.html
+│   ├── [6.1K]  wizard-functionality-test.html
+│   └── [1.6K]  wizard-test.html
+├── [7.7M]  hero-icon-source (1).png
+├── [7.7M]  hero-icon-source.png
+├── [767K]  HighlandCowKeychain.3mf
+├── [ 43M]  HighlandCowKeychain.stl
+├── [ 224]  Honeycomb Phone Stand  - 7128243/
+│   ├── [ 224]  files/
+│   ├── [ 192]  images/
+│   ├── [ 125]  LICENSE.txt
+│   └── [ 230]  README.txt
+├── [6.2M]  Honeycomb Phone Stand  - 7128243.zip
+├── [ 224]  Hug Me Ghost with Witch Hat - 2604075/
+│   ├── [ 128]  files/
+│   ├── [ 128]  images/
+│   ├── [ 122]  LICENSE.txt
+│   └── [ 446]  README.txt
+├── [2.2M]  Hug Me Ghost with Witch Hat - 2604075.zip
+├── [103M]  IINA.v1.4.1.dmg
+├── [1.2M]  iphone 14 - case.stl
+├── [2.5M]  iPhone 15 Case (2).stl
+├── [2.9M]  iPhone 15 Case_UPDATED.stl
+├── [2.7M]  iphone-14-case_0.2mm_PLA_Elegoo Neptune 4 Pro_1h31m.gcode
+├── [1.2M]  iphone-14-case.stl
+├── [4.0M]  iphone-15-case-whole.stl
+├── [2.2M]  iqos-heets-ashtray-model_files.zip
+├── [379K]  iqos-popelnik-iqos-ashtray-model_files.zip
+├── [1.2M]  item-0.png
+├── [ 19M]  knitted-pumpkin.3mf
+├── [ 61M]  knitted-pumpkin.stl
+├── [3.8M]  Latest.dmg
+├── [832K]  lbob.txt*
+├── [ 32K]  LOST_BIBLE_54_BOOKS_COMPLETE.zip
+├── [200M]  LOST_BIBLE_ALL_FORMATS_COMPLETE.zip
+├── [173M]  Messenger.525.0.0.34.106.dmg
+├── [2.7G]  Microsoft_365_and_Office_16.100.25081015_BusinessPro_Installer.pkg
+├── [170M]  MyNinja-0.1.27-universal.dmg
+├── [  96]  NetNewsWire.app/
+│   └── [ 384]  Contents/
+├── [ 22M]  octopus_spiral_v6.stl
+├── [343M]  ONLYOFFICE-arm.dmg
+├── [5.5M]  OnyX.dmg
+├── [134M]  OrcaSlicer_Mac_arm64_V2.3.0.dmg
+├── [194M]  OrcaSlicer_Mac_universal_V2.3.1-beta.dmg
+├── [ 160]  Organized/
+│   ├── [  64]  Documents/
+│   ├── [  64]  Media/
+│   └── [  64]  Software/
+├── [146K]  piston-ashtray-model_files.zip
+├── [ 160]  print-in-place-articulated-flexy-chameleon-model_files/
+│   ├── [915K]  1398499-print-in-place-articulated-flexy-chameleon-3063f063-53f8-43dd-a859-869e8939dbb7.pdf
+│   ├── [ 88M]  kogi3d_chameleon_standalone.3mf
+│   └── [324M]  kogi3d_chameleon_standalone.stl
+├── [ 12M]  prusa-dragon-vengeance-bookmarks.3mf
+├── [ 14M]  pumpkinwitchhat.stl
+├── [620K]  ring.stl
+├── [100M]  scary_pumpkin1_A.gcode
+├── [ 13M]  shark keychain AMS_PLA_3h29m.gcode
+├── [9.0M]  shark keychain AMS_PLA_3h30m.gcode
+├── [2.3M]  sitting-goat.stl
+├── [ 192]  Sonic The Hedgehog - 3032488/
+│   ├── [  96]  files/
+│   ├── [ 384]  images/
+│   ├── [ 105]  LICENSE.txt
+│   └── [ 212]  README.txt
+├── [ 16M]  Sonic The Hedgehog - 3032488.zip
+├── [ 12M]  sonic-classic-model_files.zip
+├── [2.8M]  sonic.3mf
+├── [ 54M]  sonicsilver.stl
+├── [217K]  square-ashtray-with-snuffer-model_files.zip
+├── [551K]  stitch-3-keychain-stl.stl
+├── [  64]  StrainSpotter/
+├── [ 46K]  strainspotter-hero (1).jpg
+├── [ 46K]  strainspotter-hero.jpg
+├── [1.7M]  strainspotter-session.json
+├── [1.9M]  Surfing Styled Fish Hook - 1894552.zip
+├── [ 322]  The lost books of the Bible, and The forgotten books of Eden.ris
+├── [417M]  The Mega Bundle (95% OFF + 9 FREE Products) (3).zip
+├── [ 23M]  THE+COMPLETE+ETHIOPIAN+BIBLE.pdf
+├── [ 128]  Topher_File_Org_Starter/
+│   └── [ 352]  Workspace/
+├── [1.6M]  treble_hook_size10.stl
+├── [1.6M]  treble_hook_size6.stl
+├── [1.6M]  treble_hook_size8.stl
+├── [  96]  Visual Studio Code.app/
+│   └── [ 288]  Contents/
+├── [ 13M]  weedzard-cannabis-light-7qSaTjEkHTY-unsplash.jpg
+├── [  96]  Whisky.app/
+│   └── [ 352]  Contents/
+├── [2.6G]  Xcode_26_beta_7_Universal.xip
+├── [ 23M]  yawnkitten.stl
+├── [ 23M]  zenfrogfigure.stl
+└── [ 37K]  Ziptie.stl
+
+61 directories, 249 files

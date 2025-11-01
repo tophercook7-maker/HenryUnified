@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry AI - Intelligent Desktop Wizard</title>
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">Henry AI Wizard</h1>
+                <div class="header-actions">
+                    <button id="wizardModeBtn" class="btn btn-wizard" title="Wizard Mode">🧙‍♂️ Wizard</button>
+                    <button id="appsHubBtn" class="btn btn-primary" title="Apps Hub">🚀 Apps</button>
+                    <button id="settingsBtn" class="btn btn-secondary" title="Settings">⚙️</button>
+                    <button id="minimizeBtn" class="btn btn-icon" title="Minimize">_</button>
+                    <button id="closeBtn" class="btn btn-icon" title="Close">✕</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <!-- Enhanced Sidebar -->
+            <aside class="sidebar">
+                <div class="status-bar">
+                    <div class="status-indicator"></div>
+                    <span id="statusText">Henry is ready to assist</span>
+                </div>
+                
+                <div class="sidebar-header">
+                    <h3>Active Sessions</h3>
+                    <button id="newChatBtn" class="btn btn-primary">✨ New Chat</button>
+                </div>
+                
+                <div class="conversation-list" id="conversationList">
+                    <!-- Conversations will be populated here -->
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Tasks Today</span>
+                            <span class="stat-value" id="tasksToday">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Files Processed</span>
+                            <span class="stat-value" id="filesProcessed">0</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Enhanced Chat Area -->
+            <section class="chat-area">
+                <div class="status-bar">
+                    <div class="status-indicator"></div>
+                    <span id="currentTask">Ready for your command</span>
+                    <div class="progress-bar" id="taskProgress" style="display: none;">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="chat-header">
+                    <h2 id="currentChatTitle">Henry AI Wizard</h2>
+                    <div class="chat-actions">
+                        <button id="voiceBtn" class="btn btn-secondary">🎤 Voice</button>
+                        <button id="uploadBtn" class="btn btn-secondary">📁 Upload</button>
+                        <button id="automateBtn" class="btn btn-wizard">🤖 Automate</button>
+                        <button id="clearBtn" class="btn btn-secondary">🗑️ Clear</button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <h3>🧙‍♂️ Welcome to Henry AI Wizard</h3>
+                        <p>Your intelligent automation companion with real-time interaction and comprehensive app integration.</p>
+                        
+                        <div class="wizard-features">
+                            <div class="feature-card">
+                                <div class="feature-icon">💬</div>
+                                <h4>Real-Time Chat</h4>
+                                <p>Communicate with Henry while he works on your tasks</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔄</div>
+                                <h4>Live Automation</h4>
+                                <p>Watch Henry automate your workflows in real-time</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🚀</div>
+                                <h4>App Integration</h4>
+                                <p>Connect with hundreds of apps and services</p>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions">
+                            <button class="quick-action" data-action="wizard-setup">🧙‍♂️ Setup Wizard</button>
+                            <button class="quick-action" data-action="automate-files">📁 Automate Files</button>
+                            <button class="quick-action" data-action="connect-apps">🔗 Connect Apps</button>
+                            <button class="quick-action" data-action="voice-control">🎤 Voice Control</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chatInput" 
+                            placeholder="Tell Henry what you want to automate, or ask questions while he works..."
+                            rows="1"
+                        ></textarea>
+                        <button id="sendBtn" class="btn btn-primary">
+                            <span id="sendBtnText">Send</span>
+                            <div id="sendBtnLoader" class="loading-dots" style="display: none;">
+                                <div class="loading-dot"></div>
+                                <div class="loading-dot"></div>
+                                <div class="loading-dot"></div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="input-suggestions" id="inputSuggestions">
+                        <!-- Dynamic suggestions will appear here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apps Hub Panel -->
+            <aside class="apps-hub" id="appsHub">
+                <div class="status-bar">
+                    <div class="status-indicator"></div>
+                    <span>Apps & Integrations</span>
+                </div>
+
+                <div class="apps-header">
+                    <h3>Connected Apps</h3>
+                    <button id="addAppBtn" class="btn btn-primary">+ Add App</button>
+                </div>
+
+                <div class="apps-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="productivity">📊 Productivity</button>
+                        <button class="tab-btn" data-category="development">💻 Development</button>
+                        <button class="tab-btn" data-category="communication">💬 Communication</button>
+                        <button class="tab-btn" data-category="automation">🤖 Automation</button>
+                    </div>
+                </div>
+
+                <div class="apps-grid" id="appsGrid">
+                    <!-- Productivity Apps -->
+                    <div class="app-card" data-app="notion" data-category="productivity">
+                        <div class="app-icon">📝</div>
+                        <div class="app-name">Notion</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="google-drive" data-category="productivity">
+                        <div class="app-icon">📁</div>
+                        <div class="app-name">Google Drive</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="slack" data-category="communication">
+                        <div class="app-icon">💬</div>
+                        <div class="app-name">Slack</div>
+                        <div class="app-status disconnected">○</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="github" data-category="development">
+                        <div class="app-icon">🐙</div>
+                        <div class="app-name">GitHub</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="zapier" data-category="automation">
+                        <div class="app-icon">⚡</div>
+                        <div class="app-name">Zapier</div>
+                        <div class="app-status disconnected">○</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="calendar" data-category="productivity">
+                        <div class="app-icon">📅</div>
+                        <div class="app-name">Calendar</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="vscode" data-category="development">
+                        <div class="app-icon">💻</div>
+                        <div class="app-name">VS Code</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="email" data-category="communication">
+                        <div class="app-icon">📧</div>
+                        <div class="app-name">Email</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                    
+                    <div class="app-card" data-app="terminal" data-category="development">
+                        <div class="app-icon">⌨️</div>
+                        <div class="app-name">Terminal</div>
+                        <div class="app-status connected">●</div>
+                    </div>
+                </div>
+
+                <div class="automation-panel">
+                    <h4>Quick Automations</h4>
+                    <div class="automation-buttons">
+                        <button class="automation-btn" data-automation="sync-all">🔄 Sync All</button>
+                        <button class="automation-btn" data-automation="backup">💾 Backup</button>
+                        <button class="automation-btn" data-automation="organize">📂 Organize</button>
+                        <button class="automation-btn" data-automation="update">⬆️ Update</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="wizardFab" title="Wizard Mode">
+            🧙‍♂️
+        </button>
+
+        <!-- Wizard Modal -->
+        <div class="wizard-modal" id="wizardModal" style="display: none;">
+            <div class="wizard-content">
+                <h2>🧙‍♂️ Henry AI Setup Wizard</h2>
+                <div class="wizard-steps">
+                    <!-- Wizard steps will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Voice Control Indicator -->
+        <div class="voice-indicator" id="voiceIndicator" style="display: none;">
+            <div class="voice-animation">
+                <div class="voice-wave"></div>
+                <div class="voice-wave"></div>
+                <div class="voice-wave"></div>
+            </div>
+            <span>Listening...</span>
+        </div>
+    </div>
+
+    <script type="module" src="enhanced-main.js"></script>
+</body>
+</html>
