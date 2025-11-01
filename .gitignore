@@ -1,0 +1,32 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+yarn.lock
+
+# Rust / Tauri
+**/target/
+src-tauri/target/
+*.dSYM/
+
+# Vite / build
+dist/
+.vite/
+.DS_Store
+
+# Logs & PIDs
+*.log
+logs/
+*.pid
+
+# Env / keys
+.env
+.env.local
+*.key
+
+# Backups / misc
+*.bak*
+_archive/
+snapshots/
+merge.log
+MERGE_MANIFEST.json
