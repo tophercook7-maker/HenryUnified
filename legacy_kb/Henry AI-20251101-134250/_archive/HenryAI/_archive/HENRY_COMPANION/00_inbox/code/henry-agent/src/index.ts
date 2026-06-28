@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import multer from "multer";
-import { exec, spawn } from "child_process";
+import { execFile, spawn } from "child_process";
 import path from "path";
 import fs from "fs";
 import { OpenAI } from "openai";
@@ -122,7 +122,7 @@ app.post("/notes/create", (req, res) => {
         make new note at folder "Notes" with properties {name:"${title}", body:"${body.replace(/"/g,'\\"')}"}
       end tell
     end tell`;
-  exec(`osascript -e ${JSON.stringify(script)}`, (err, _stdout, stderr) => {
+  execFile("osascript", ["-e", script], (err, _stdout, stderr) => {
     if (err) return res.status(500).json({ error: stderr || err.message });
     res.json({ ok: true });
   });
